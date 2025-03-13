@@ -148,9 +148,9 @@
             flex-direction: column;
             justify-content: center; /* Center horizontally */
             align-items: center; /* Center vertically */
-            flex: 0 0 420px;
-            width: 420px;
-            min-width: 420px;
+            flex: 0 0 400px;
+            width: 400px;
+            min-width: 400px;
             min-height: fit-content;
         }
 
@@ -159,7 +159,7 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-            width: 300px; /* Adjust width if necessary */
+            width: 280px; /* Adjust width if necessary */
             min-height: 180px;
             display: flex;
             flex-direction: column;
@@ -177,7 +177,13 @@
             font-size: 20px; /* Increased font size by 2px */
         }
 
-        .activity-card p.counter {
+        .activity-card p.counter {<div class="section">
+            <div class="activity-card">
+                <p id="activity-display">Tõmba hinge</p>
+            </div>
+            <button onclick="getRandomActivity('media')">Puhka</button>
+            <p class="counter">Tegevusi: <span id="media-counter">0</span></p>
+        </div>
             margin-top: 20px; /* Move the Tegevusi: text 20px below the card */
         }
 
@@ -301,11 +307,23 @@
         div {
             border: none; /* Remove borders from all divs */
         }
+        /* .bordered-image {
+             border: 3px solid gold; Golden border 
+             border-radius: 5px; Optional: adds rounded corners 
+        }*/
+        .bordered-image {
+            border: 3px solid gold; /* Golden border */
+            border-radius: 50%; /* Makes the image circular */
+            width: 200px; /* Ensure the width and height are equal for a perfect circle */
+            height: 200px;
+            object-fit: cover; /* Ensures the image covers the entire area without distortion */
+        }
     </style>
 </head>
 <body>
     <button class="music-toggle" onclick="toggleMusic()">♪</button>
     <div class="container">
+        <img src="Steampunk_Hare.png" alt="Activity Image" width="200" height="200" class="bordered-image" />
         <div class="activities-container">
             <div class="section">
                 <div class="activity-card">
@@ -314,6 +332,7 @@
                 <button onclick="getRandomActivity('media')">Puhka</button>
                 <p class="counter">Tegevusi: <span id="media-counter">0</span></p>
             </div>
+            
             <div class="section">
                 <div class="activity-card">
                     <p id="child-activity-display">Mängi lapsega</p>
