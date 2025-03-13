@@ -24,9 +24,13 @@
             justify-content: center; 
             position: relative;
             overflow-x: hidden;
+            background-image: url('meri_1234.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        body::before {
+       /* body::before {
             content: '';
             position: fixed;
             top: 0;
@@ -34,14 +38,14 @@
             right: 0;
             bottom: 0;
             background-image: 
-                /* Gradient circles */
+                /* Gradient circles 
                 radial-gradient(circle at 50% 50%, 
                     rgba(255,255,255,0.3) 0%, 
                     rgba(255,255,255,0.2) 30%,
                     rgba(255,255,255,0.1) 50%,
-                    transparent 70%
-                ),
-                /* Vertical stripes */
+                    transparent 70% 
+                ),*/
+                /* Vertical stripes 
                 linear-gradient(90deg,
                     rgba(255,255,255,0.08) 0%,
                     rgba(255,255,255,0.08) 2px,
@@ -61,7 +65,7 @@
             pointer-events: none;
             z-index: 1;
             animation: Stripes 40s diagonal infinite;
-        }
+        }*/
 
         @keyframes floralStripes {
             0% {
@@ -380,7 +384,7 @@
         const backgroundMusic = document.getElementById('backgroundMusic');
 
         // Set background music volume and start playing
-        backgroundMusic.volume = 0.4;
+        backgroundMusic.volume = 0.5;
         let isMusicPlaying = true;
 
         // Initialize and play background music
